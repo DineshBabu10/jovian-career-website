@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Jovian Careers Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <style>
+    #banner {
+      display: block;
+      margin: 20px auto;
+      width: 150px;
+      height: auto;
+    }
+
+    h1 {
+      color: blue;
+      font-size: 40px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    p {
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    .bodytext {
+      font-size: 20px;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .container-text {
+      max-width: 800px;
+      margin: 40px auto;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      color: #444;
+      text-align: center;
+    }
+
+    .footer-buttons {
+      text-align: center;
+      margin: 30px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Banner Image -->
+  <img id="banner" src="/Static/image.jpg" alt="Jovian Logo">
+
+  <!-- Title -->
+  <h1>{{ company_name }} Careers</h1>
+
+  <!-- Job Listings -->
+  <div class="container mt-4">
+    {% for job in jobs %}
+      {% include 'item.html' %}
+    {% endfor %}
+  </div>
+
+  <!-- Test Heading -->
+  <h1 class="text-center">This is second Topic only to test whether the class is working fine or not. If it's working, it should be center aligned</h1>
+
+  <!-- Description -->
+  <div class="container-text">
+    <p>This is a place to grow, learn and connect. Everything that makes you who you are is welcome here. No two people are the same. By prioritizing six areas of well-being, we foster an inclusive environment where we all feel valued, seen and heard—we call this Net Better Off. From developers and designers to strategists and SAP pros, there are endless opportunities for you to learn, grow and make a difference.</p>
+  </div>
+
+  <!-- Buttons -->
+  <div class="footer-buttons">
+    <button class="btn btn-primary">About Us</button>
+    <button class="btn btn-primary">Contact Us</button>
+  </div>
+
+  <!-- Footer Note -->
+  <p class="bodytext text-center">
+    I'm Dinesh and I'm learning to code with Jovian. This is the sample project of the Jovian Career website developed by me. I'm still learning, so this is just a basic version.
+  </p>
+
+</body>
+</html>
